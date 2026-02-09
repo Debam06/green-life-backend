@@ -17,6 +17,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      plantedAt: {   // ✅ Added to match your model
+        type: Sequelize.DATE,
+        allowNull: false
+      },
+      notes: {       // ✅ Added to match your model
+        type: Sequelize.TEXT,
+        allowNull: true
+      },
       userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
