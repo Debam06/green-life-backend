@@ -9,17 +9,25 @@ module.exports = {
         primaryKey: true,
         allowNull: false
       },
-      species: {   // ✅ Added this column
+      species: {
         type: Sequelize.STRING,
         allowNull: false
       },
-      plantName: {
-        type: Sequelize.STRING,
-        allowNull: false
+      watering: {
+        type: Sequelize.JSON,   // ✅ matches your seeder’s JSON.stringify
+        allowNull: true
       },
-      careTip: {
-        type: Sequelize.TEXT,
-        allowNull: false
+      sunlight: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      fertilizer: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      pruning: {
+        type: Sequelize.STRING,
+        allowNull: true
       },
       createdAt: {
         type: Sequelize.DATE,
