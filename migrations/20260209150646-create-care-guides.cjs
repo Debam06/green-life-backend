@@ -9,6 +9,10 @@ module.exports = {
         primaryKey: true,
         allowNull: false
       },
+      species: {   // ✅ Added this column
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       plantName: {
         type: Sequelize.STRING,
         allowNull: false
