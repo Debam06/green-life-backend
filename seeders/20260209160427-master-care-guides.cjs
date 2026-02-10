@@ -210,16 +210,18 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
-    ]);
+    ], {
+      ignoreDuplicates: true // ✅ prevents inserting duplicates
+    });
   },
 
-      async down(queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete('CareGuides', {
       species: [
-        'Tulsi', 'Mango', 'Rose', 'AloeVera', 'MoneyPlant', 'Hibiscus',
-        'Neem', 'Basil', 'Tomato', 'Chili', 'CurryLeaf', 'Mint',
-        'Coriander', 'Spinach', 'Papaya', 'Banana', 'Guava', 'Peas',
-        'Potato', 'Pineapple', 'Lavender', 'Ginger', 'Strawberry'
+        'Tulsi', 'Mango', 'Rose', 'AloeVera', 'MoneyPlant', 'Hibiscus', 'Neem',
+        'Basil', 'Tomato', 'Chili', 'CurryLeaf', 'Mint', 'Coriander',
+        'Spinach', 'Papaya', 'Banana', 'Guava', 'Peas', 'Potato',
+        'Pineapple', 'Lavender', 'Ginger', 'Strawberry'
       ]
     }, {});
   }
